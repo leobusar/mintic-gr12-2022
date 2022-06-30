@@ -7,7 +7,7 @@ package clases;
 public class Perro {
 
     // atributos
-    public String nombre;
+    protected String nombre;
     public String colorOjos;
     public String raza;
     public int edad;
@@ -32,6 +32,18 @@ public class Perro {
     public void saludar() {
         System.out.println("Hola, mi nombre es " + nombre);
     }
+
+    public void saludar(int n) {
+        
+        for(int i=0; i<n ; i++){
+            ladrar();
+        }
+    }
+    
+    public void saludar(String nombre) {
+        System.out.println("Hola "+nombre+ ", mi nombre es " + this.nombre);
+        
+    }    
     
     public void quienEsMayor(Perro otroPerro){
         if (this.edad == otroPerro.edad){
