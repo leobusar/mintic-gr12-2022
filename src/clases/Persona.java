@@ -27,4 +27,8 @@ public class Persona {
         return this.peso/ ( this.altura* this.altura);
     }
     
+    public boolean esMayorEdad(){
+        return edad >= 18;
+    }
+    
 }

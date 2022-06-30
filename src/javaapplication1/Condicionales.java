@@ -58,9 +58,17 @@ public class Condicionales {
         
         switch (vocal) {
             case 'a': 
+                ret = true;
+                break;
             case 'e': 
+                ret = true;
+                break;
             case 'i': 
+                ret = true;
+                break;
             case 'o': 
+                ret = true;
+                break;
             case 'u': 
                 ret = true;
                 break;
@@ -69,8 +77,7 @@ public class Condicionales {
                 break;
         }
         
-     
-        return ret;
+        return true;
         
     }
     

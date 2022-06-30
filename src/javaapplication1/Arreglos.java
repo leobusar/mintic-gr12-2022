@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaapplication1;
 
 import java.util.Scanner;
@@ -15,7 +11,7 @@ public class Arreglos {
     public static int[] lee_arreglo_enteros(Scanner sc, int n) {
 
         int[] x = new int[n];
-
+        
         for (int i = 0; i < n; i++) {
             System.out.print("Ingrese la componente " + i + ": ");
             x[i] = sc.nextInt();

@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ciclos {
     
     public static void imprimirNumeros(){
-        int i = 0; 
+        int i = 0;
         while (i <= 6) {
             System.out.println(i);
             i = i + 1;

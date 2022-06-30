@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package clases;
-
+import java.util.Scanner;
 /**
  *
  * @author leobusta
@@ -29,9 +29,28 @@ public class Main {
 //        
 //        perro1.quienEsMayor(perro2);
 //        perro2.saludarOtroPerro(perro1);
-
-        Persona person1 = new Persona("Laura", 25,'M',55,1.62);
         
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Digite su nombre: ");
+        String nomb = sc.nextLine();
+        System.out.print("Digite la edad: ");
+        int edad = sc.nextInt();
+        System.out.print("Digite el género (H/M): ");
+        String generostr = sc.nextLine();
+        //char genero = generostr.charAt(0);
+        System.out.print("Digite el peso(Kg): ");
+        double peso = sc.nextDouble();
+        System.out.print("Digite la estatura(m): ");
+        double estatura = sc.nextDouble();
+
+        Persona person1 = new Persona(nomb, edad,'H',peso,estatura);
+        
+        if (person1.esMayorEdad()){
+            System.out.println(person1.nombre+" es mayor de edad");
+        }else{
+            System.out.println(person1.nombre+" es menor de edad");
+        }
         System.out.println(String.format("IMC: %.2f",person1.calcularIMC()));
         
     }
