@@ -24,7 +24,7 @@ public class Main {
         perro2.saludar();
         
         System.out.println(perro2.colorOjos);
-        perro2.nombre = "bruno";
+//        perro2.nombre = "bruno";
         
         perro2.saludar();
         
