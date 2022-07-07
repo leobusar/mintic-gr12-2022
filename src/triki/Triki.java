@@ -17,11 +17,35 @@ public class Triki {
     }
     
     public void marcarCasilla(char simbolo, int fila, int columna){
+        if (fila >=3 || columna >= 3 || this.tablero[fila][columna] != 'a')
+            return;
+            //throw new RuntimeException("Valor fuera de rango");
+        
         this.tablero[fila][columna] = simbolo;
     }
     
     public char verificarCasilla(int fila, int columna){
+        if (fila >=3 || columna > 3)
+            return 'a';
         return this.tablero[fila][columna];
+    }
+    
+    public char verificarGanador(){
+       for(int i =0; i<3; i++){
+           if( tablero[i][0]==tablero[i][1] && tablero[i][0]==tablero[i][2] && tablero[i][0]!='a'){
+               return tablero[i][0];
+           }
+           if( tablero[0][i]==tablero[1][i] && tablero[0][i]==tablero[2][i] && tablero[i][0]!='a'){
+               return tablero[0][i];
+           }           
+       }
+       if(tablero[1][1]==tablero[2][2] && tablero[1][1]==tablero[0][0] && tablero[1][1]!='a')
+           return tablero[1][1];
+       
+       if(tablero[1][1]==tablero[0][2] && tablero[1][1]==tablero[2][0] && tablero[1][1]!='a')
+           return tablero[1][1];       
+       
+       return 'a';
     }
     
     public void mostrarTablero(){
