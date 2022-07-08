@@ -19,9 +19,9 @@ public class Juego extends Producto{
 
     @Override
     public String toString(){
-        String output = "Tipo: Pelicula\n";
+        String output = "Tipo: Juego\n";
         output += super.toString();
-        output += "\nTipo Juego: "+tipo;
+        output += "\nTipo de Juego: "+tipo;
         
         return output;
     }

@@ -25,6 +25,16 @@ public class TiendaVideo {
         this.ultimo++;
     }
     
+    public void agregarPelicula(Pelicula pelicula){
+        this.productos[ultimo] = pelicula;
+        this.ultimo++;
+    }
+
+    public void agregarJuego(Juego juego){
+        this.productos[ultimo] = juego;
+        this.ultimo++;
+    }    
+    
     public void inventario(){
         for(int i =0; i < ultimo; i++){
             System.out.println(this.productos[i]);
@@ -46,12 +56,24 @@ public class TiendaVideo {
         int opcion = Integer.parseInt(comandoArr[0]);
         switch(opcion){
             case 1:
-                String nombre = comandoArr[1];
-                String codigo = comandoArr[3];
-                Double precio = Double.parseDouble(comandoArr[2]);
+                String tipo = comandoArr[1];
+                String nombre = comandoArr[2];
+                String codigo = comandoArr[4];
+                Double precio = Double.parseDouble(comandoArr[3]);
                 
-                Producto producto = new Producto(nombre, precio, codigo);
-                this.agregarProducto(producto);
+                if(tipo.equals("Pelicula")){
+                    Double duracion = Double.parseDouble(comandoArr[5]);
+                    Pelicula pelicula = new Pelicula(duracion, nombre, precio, codigo);
+                    
+                    agregarPelicula(pelicula);
+                }else{
+                    String tipoJuego = comandoArr[5];
+                    Juego juego  = new Juego(tipoJuego, nombre, precio, codigo);
+                    agregarJuego(juego);
+                }
+                
+                //Producto producto = new Producto(nombre, precio, codigo);
+                //this.agregarProducto(producto);
                 
                 break;
             case 2:
