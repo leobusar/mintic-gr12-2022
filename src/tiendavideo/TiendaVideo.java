@@ -24,7 +24,7 @@ public class TiendaVideo {
         this.productos[ultimo] = producto;
         this.ultimo++;
     }
-    
+ /*   
     public void agregarPelicula(Pelicula pelicula){
         this.productos[ultimo] = pelicula;
         this.ultimo++;
@@ -34,7 +34,7 @@ public class TiendaVideo {
         this.productos[ultimo] = juego;
         this.ultimo++;
     }    
-    
+ */   
     public void inventario(){
         for(int i =0; i < ultimo; i++){
             System.out.println(this.productos[i]);
@@ -65,11 +65,11 @@ public class TiendaVideo {
                     Double duracion = Double.parseDouble(comandoArr[5]);
                     Pelicula pelicula = new Pelicula(duracion, nombre, precio, codigo);
                     
-                    agregarPelicula(pelicula);
+                    agregarProducto(pelicula);
                 }else{
                     String tipoJuego = comandoArr[5];
                     Juego juego  = new Juego(tipoJuego, nombre, precio, codigo);
-                    agregarJuego(juego);
+                    agregarProducto(juego);
                 }
                 
                 //Producto producto = new Producto(nombre, precio, codigo);
