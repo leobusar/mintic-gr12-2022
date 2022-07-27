@@ -25,6 +25,14 @@ public class Main {
         
         ArrayList<String> nuevalista = new ArrayList<>(Arrays.asList(entradaArr));
         
+        ArrayList<Integer> listaInt = new ArrayList<>();
+        
+        for(String  elem: nuevalista){
+            listaInt.add(Integer.parseInt(elem));
+        }
+        
+        System.out.println(listaInt);
+        
 //        ArrayList<String> nuevalista = 
 //                new  ArrayList<>(Arrays.asList("Newpi", "San Francis", "Naughty Boys", "Newpi", "Newpi", "Naughty Boys", "Newpi", "San Francis"));
 //        
